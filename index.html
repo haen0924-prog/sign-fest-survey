@@ -227,7 +227,7 @@ $('#form').addEventListener('submit', async e => {
 
 // 링크에 ?r=performer / staff / volunteer 를 붙이면 바로 그 설문이 열려요
 const pr = new URLSearchParams(location.search).get('r');
-if (SURVEY[pr]) render(pr);
+if (SURVEY[pr]) { render(pr); $('#back').hidden = true; } // 대상별 링크로 들어오면 '다시 고르기' 숨김
 </script>
 </body>
 </html>
